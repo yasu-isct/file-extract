@@ -1,43 +1,5 @@
-# GitHub Project Description
+# GitHub公開紹介（日語）
 
-## Short Description
+募集要項PDFの解析・証拠選択・構造化抽出を試した初期RAGプロトタイプ。自然言語QAで直面した文脈・応答時間・APIコストの課題を、後継J-Gradの設計につなげた開発記録。
 
-English:
-
-```text
-Profile-guided evidence selection for complex long PDFs: compresses LLM input and converts dense documents into structured JSON and readable reports.
-```
-
-日本語:
-
-```text
-プロファイル誘導型カーソル抽出により長文PDFのLLM入力を圧縮し、高密度文書を構造化JSONと可読レポートへ変換する汎用情報抽出プロジェクト。
-```
-
-## Portfolio Summary
-
-English:
-
-This project is an end-to-end long-document information extraction system based on profile-guided evidence selection. It turns user conditions into an evidence selector, reduces unnecessary chunks before LLM calls, and then applies category-specific Pydantic schemas for structured JSON output.
-
-The system combines PyMuPDF and pdfplumber for PDF parsing, rule-based profiling and chunking, profile-guided evidence selection, OpenAI-compatible LLM extraction, schema validation, deduplication, and human-readable report generation. In an evaluation sample, the evidence selector reduced LLM candidate chunks from 123 to 51 before extraction.
-
-日本語:
-
-本プロジェクトは、プロファイル誘導型カーソル抽出に基づく長文 PDF 向けのエンドツーエンド情報抽出システムです。ユーザー条件を抽出カーソルに変換し、LLM に渡す前に不要なチャンクを削減したうえで、カテゴリ別の Pydantic Schema により構造化 JSON を生成します。
-
-PDF 解析には PyMuPDF と pdfplumber を併用し、ページプロファイリング、チャンク化、プロファイル/カーソルによる入力圧縮、OpenAI 互換 LLM による抽出、Schema 検証、重複排除、可読レポート生成までを一つのパイプラインとして実装しています。評価用サンプルでは、LLM 候補チャンクを 123 から 51 へ削減しました。
-
-## Suggested Topics
-
-```text
-llm
-document-ai
-information-extraction
-pdf-processing
-structured-output
-pydantic
-long-context
-token-compression
-japanese-nlp
-```
+主開発は[J-Grad-Admission-RAG](https://github.com/yasu-isct/J-Grad-Admission-RAG)へ移行。旧版の性能目標やロードマップは当時の計画として保持します。現在の運用性能や製品の完成を意味しません。
