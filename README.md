@@ -100,6 +100,8 @@ python -m admission_parser.profile_pipeline samples\2027_4_2026_9_master.pdf `
 
 既存資料の「次の開発」は当時の計画です。現在の主開発を示すものではありません。
 
+初期のクローラー・スケジューラー・通知モジュールは削除済みです。Git履歴を参照してください。
+
 ## プロジェクトのつながり
 
 **file-extract：長文書処理の探索** → **[J-Grad：教務支援への発展](https://github.com/yasu-isct/J-Grad-Admission-RAG)** → **[Lab-Radar：研究室検索の拡張構想](https://github.com/yasu-isct/Lab-Radar)**
