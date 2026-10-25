@@ -21,7 +21,6 @@ flowchart TB
     source --> entry["profile_pipeline.py\n当前推荐主入口"]
     source --> legacy["pipeline.py / profile_filter.py / cursor_selector.py\n旧入口或兼容层"]
     source --> core["extractor / chunker / evidence_selector\nretriever / llm_parser / reporter"]
-    source --> future["stage2 / stage3\n早期爬虫、更新检测、通知实验入口"]
 
     outputs --> runs["runs/<run_name>/\n单次运行封包，当前最推荐看这里"]
     outputs --> embedding["embedding_cache/\n本地 embedding hash 缓存和可视化"]
@@ -94,8 +93,6 @@ flowchart LR
 | `pipeline.py` | 不带 profile 的旧通用抽取入口 | legacy |
 | `profile_filter.py` | cursor/evidence selector 前的旧 profile filter | legacy |
 | `profiler.py` | 早期相关页筛选和页面 profile | 仍被旧入口使用 |
-| `stage2/` | 爬虫、下载、SQLite、更新检测实验 | future/experimental |
-| `stage3/` | diff、通知、scheduler 实验 | future/experimental |
 
 ## 脚本和配置
 
@@ -106,7 +103,6 @@ flowchart LR
 | `configs/universities.yaml` | 早期大学站点配置示例 | 提交 |
 | `.env.example` | API 配置模板 | 提交 |
 | `.env` | 真实 API key | 不提交 |
-| `test_env.py` | PDF/LLM 环境检查脚本 | 提交 |
 
 ## 本地资产
 
@@ -209,4 +205,3 @@ flowchart LR
 2. 新的中间产物优先写入 `outputs/runs/<run_name>/`。
 3. 旧目录 `outputs/final_json`、`outputs/final_reports`、`outputs/intermediate`、`outputs/diagnostics` 暂时保留，但不作为新实验的主要查看入口。
 4. `cursor_*` 旧命名只做兼容，不再作为新代码命名。
-5. `stage2/`、`stage3/` 暂时作为后续产品化方向的实验区，不混进当前 admission extraction 主线。
